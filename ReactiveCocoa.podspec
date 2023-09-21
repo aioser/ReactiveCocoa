@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "11.0"
   s.watchos.deployment_target = "4.0"
 
-  s.source       = { :git => "https://github.com/ReactiveCocoa/ReactiveCocoa.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/aioser/ReactiveCocoa.git", :tag => "#{s.version}" }
   s.source_files = "ReactiveCocoa/*.{swift,h,m}", "ReactiveCocoa/Shared/*.{swift}", "ReactiveCocoaObjC/**/*.{h,m}"
   s.public_header_files = "ReactiveCocoaObjC/include/ObjCRuntimeAliases.h"
   s.osx.source_files = "ReactiveCocoa/AppKit/*.{swift}"
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.watchos.source_files = "ReactiveCocoa/WatchKit/*.{swift}"
   s.module_name = 'ReactiveCocoa'
 
-  s.dependency 'ReactiveSwift', '~> 7.0'
+  s.dependency 'ReactiveSwift', '~> 7'
 
   s.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS[config=Release]" => "$(inherited) -suppress-warnings" }
   s.swift_versions = ['5.1', '5.2']
